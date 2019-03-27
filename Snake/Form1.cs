@@ -19,13 +19,14 @@ namespace Snake
         {
             InitializeComponent();
             if_game_avtive = false;
+            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (if_game_avtive)
             {
-
+                game_field.CreateGraphics().Clear(Color.Black);
             }
             else
             {
@@ -34,6 +35,16 @@ namespace Snake
                 Brush b = new SolidBrush(Color.Aqua);
                 game_field.CreateGraphics().DrawString("Press the Start", f, b, 80, 135);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void startToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if_game_avtive = true;
         }
     }
 }
