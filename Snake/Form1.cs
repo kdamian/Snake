@@ -14,6 +14,7 @@ namespace Snake
     {
 
         private bool if_game_avtive;
+        private Snake snake;
 
         public Form1()
         {
@@ -27,6 +28,7 @@ namespace Snake
             if (if_game_avtive)
             {
                 game_field.CreateGraphics().Clear(Color.Black);
+                snake.Move();
             }
             else
             {
@@ -45,6 +47,7 @@ namespace Snake
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if_game_avtive = true;
+            snake = new Snake(game_field.Width, game_field.Height);
         }
     }
 }

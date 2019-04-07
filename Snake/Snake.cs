@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,6 +62,14 @@ namespace Snake
             if (x[0] > segment * 20) { x[0] = 0; }
             if (y[0] < 0) { y[0] = segment * 19; }
             if (y[0] > segment * 20) { y[0] = 0; }
+        }
+
+        public void draw(Graphics g, Brush b)
+        {
+            for (int i = 0; i < segments; i++)
+            {
+
+            }
         }
     }
 }
