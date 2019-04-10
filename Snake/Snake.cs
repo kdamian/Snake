@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
+    
+
     class Snake
     {
         public int segments;
@@ -68,8 +70,15 @@ namespace Snake
         {
             for (int i = 0; i < segments; i++)
             {
-
+                g.FillRectangle(b, x[i], y[i], segment, segment);
             }
+        }
+
+        public void add()
+        {
+            x[segments] = x[segments - 1];
+            y[segments] = y[segments - 1];
+            segments = segments + 1;
         }
     }
 }
