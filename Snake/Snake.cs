@@ -80,5 +80,17 @@ namespace Snake
             y[segments] = y[segments - 1];
             segments = segments + 1;
         }
+
+        public bool if_snake_alive()
+        {
+            for (int i = 1; i < segments; i++)
+            {
+                if (x[0] == x[i] && y[0] == y[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

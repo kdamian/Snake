@@ -36,6 +36,8 @@
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.fasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.slowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             // 
             this.game_field.BackColor = System.Drawing.Color.Black;
             this.game_field.Location = new System.Drawing.Point(16, 33);
-            this.game_field.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.game_field.Margin = new System.Windows.Forms.Padding(4);
             this.game_field.Name = "game_field";
             this.game_field.Size = new System.Drawing.Size(373, 345);
             this.game_field.TabIndex = 0;
@@ -75,15 +77,20 @@
             this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
             this.pauseToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.pauseToolStripMenuItem.Text = "Pause";
+            this.pauseToolStripMenuItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // restartToolStripMenuItem
             // 
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
             this.restartToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
             // speedToolStripMenuItem
             // 
+            this.speedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fasterToolStripMenuItem,
+            this.slowerToolStripMenuItem});
             this.speedToolStripMenuItem.Name = "speedToolStripMenuItem";
             this.speedToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
             this.speedToolStripMenuItem.Text = "Speed";
@@ -91,6 +98,20 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // fasterToolStripMenuItem
+            // 
+            this.fasterToolStripMenuItem.Name = "fasterToolStripMenuItem";
+            this.fasterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.fasterToolStripMenuItem.Text = "Faster";
+            this.fasterToolStripMenuItem.Click += new System.EventHandler(this.fasterToolStripMenuItem_Click);
+            // 
+            // slowerToolStripMenuItem
+            // 
+            this.slowerToolStripMenuItem.Name = "slowerToolStripMenuItem";
+            this.slowerToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.slowerToolStripMenuItem.Text = "Slower";
+            this.slowerToolStripMenuItem.Click += new System.EventHandler(this.slowerToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -100,7 +121,7 @@
             this.Controls.Add(this.game_field);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -121,6 +142,8 @@
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem speedToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem fasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem slowerToolStripMenuItem;
     }
 }
 
