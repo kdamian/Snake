@@ -68,7 +68,8 @@ namespace Snake
 
         public void draw(Graphics g, Brush b)
         {
-            for (int i = 0; i < segments; i++)
+            g.FillRectangle(new SolidBrush(Color.Green), x[0], y[0], segment, segment);
+            for (int i = 1; i < segments; i++)
             {
                 g.FillRectangle(b, x[i], y[i], segment, segment);
             }
